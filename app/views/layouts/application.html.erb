@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Contact us", contact_path %></li>
+      <li><%= link_to "About us", about_us_path %></li>
+    </ul>
+    <form action="/contact" method="get">
+      <input type="text" name="turtle" placeholder="Who are you looking for?" value="<%= params[:turtle] %>">
+      <input type="submit">
+    </form>
+
     <%= yield %>
   </body>
 </html>
